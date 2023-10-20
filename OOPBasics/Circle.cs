@@ -6,18 +6,34 @@ using System.Threading.Tasks;
 
 namespace OOPBasics
 {
-    internal class Circle
+    public class Circle
     {
-        private int _radius { get; set; }
+        public double Radius { get; set; } // property
+        public double Area { get; set; }
+        public double Circumference { get; set; }
+        public double Volume { get; set; }
 
-        internal Circle (int radius)
+
+        public Circle (double radius) // constructor
         {
-            _radius = radius;
+            Radius = radius;
         }
 
-        public double GetArea()
+        public double GetArea() // metod
         {
-            return ((_radius * _radius) * Math.PI);
+            return Math.Round(((Radius * Radius) * Math.PI), 2);
         }
+
+        public double GetCircumference()
+        {
+            return Math.Round((2.0 * Math.PI * Radius), 2);
+        }
+
+        public double GetVolume()
+        {
+            return Math.Round(((4.0 / 3.0) * Math.PI * (Radius * Radius * Radius)), 2);
+        }
+
+
     }
 }
