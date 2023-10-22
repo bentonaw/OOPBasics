@@ -15,15 +15,9 @@
             Console.WriteLine($"Circumference: {circle2.GetCircumference()} cm");
             Console.WriteLine($"Volume: {circle2.GetVolume()} cm³");
 
-            Console.WriteLine("\nTo calculate the area of a triangle I will need the length of the base and height (length of the longest line perpendicular to the base)");
-            Triangle triangle1 = new Triangle();
+            Triangle triangle1 = new Triangle(5, 6); // instansiering av triangel klassen för uträkning av arean när man vet längden på två sidor samt har en 90 gradig vinkel mellan dem.
 
-            Console.Write("Length of a: ");
-            triangle1.A = double.Parse(Console.ReadLine());
-            Console.Write("Length of b: ");
-            triangle1.B = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("The area of the triangle is " + triangle1.GetArea2sides() + " units");
+            Console.WriteLine($"\nThe area of a triangle with the base length 5 and height 6 is: {triangle1.GetArea2sides()} units");
 
         }
     }
